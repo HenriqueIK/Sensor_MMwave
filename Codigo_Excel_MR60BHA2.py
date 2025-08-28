@@ -3,8 +3,8 @@
 # 2 - Depois que do codigo estar pronto para rodar, ligue o arduino com o codigo e o sensor carregados nele
 # 3 - Rode o codigo no VScode
 # 4 - Nao e necessario abrir o Serial Plotter ou o Serial Monitor
-# 5 - O arquivo para Excel vai ficar salvo na pasta aonde voce salvou esse codigo python
-# 6 - Para parar o codigo e salvar a coleta aperte Ctrl + C
+# 5 - O arquivo para Excel vai ficar salvo na pasta aonde voce selecionou na linha 19
+# 6 - Para parar o codigo e salvar a coleta aperte (Ctrl + C) no terminal que esta saindo os dados no compilador
 
 import serial
 
@@ -47,4 +47,5 @@ with open(arquivo_csv, mode = "w", newline = "") as file:
                 print(timestamp, valores)
     except KeyboardInterrupt:
         print("\nColeta encerrada pelo usuário.")
+
         ser.close()
